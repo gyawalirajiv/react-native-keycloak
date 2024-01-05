@@ -22,35 +22,6 @@ export default function App() {
         discovery
     );
 
-    async function getToken(code) {
-        const tokenEndpoint = 'http://192.168.1.145:8085/realms/myrealm/protocol/openid-connect/token';
-        const payload = {
-            grant_type: 'authorization_code',
-            code: code,
-            redirect_uri: 'exp://192.168.1.145:8081',
-            client_id: 'react-native-client',
-            // client_secret: 'YOUR_CLIENT_SECRET'
-        };
-
-        try {
-            const response = await axios.post(tokenEndpoint, JSON.stringify(payload), {
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-            });
-
-
-            console.log("RAJIV", response)
-            return response.data; // This contains the JWT token
-        } catch (error) {
-            console.error('Error fetching token:', error);
-        }
-    }
-
-    if(result) {
-        getToken(result.params.code);
-    }
-
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Button title="Login!" disabled={!request} onPress={() => promptAsync()} />
