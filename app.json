@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "rajiv",
     "name": "react-native-keycloak",
     "slug": "react-native-keycloak",
     "version": "1.0.0",
