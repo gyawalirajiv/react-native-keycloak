@@ -16,7 +16,8 @@
     "expo-web-browser": "~12.3.2",
     "query-string": "^8.1.0",
     "react": "18.2.0",
-    "react-native": "0.72.6"
+    "react-native": "0.72.6",
+    "expo-crypto": "~12.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
